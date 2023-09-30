@@ -11,7 +11,15 @@ print("-= ¡BIENVENID@ AL PROGRAMA DE OPERACIONES MATEMÁTICAS! =-")
 print("/////////////////////////////////////////////////////////\n")
 
 def obtener_datos():
-    return ("DiviSION   ", 10)
+    #Obtiene los datos de los 2 argumentos
+    if len(sys.argv) < 3:
+        print("Uso: python programa.py <operacion> <entero>")
+        sys.exit(1)
+    operacionArg = sys.argv[1] #suma, resta, multi, divi.
+    enteroArg = int(sys.argv[2]) #numEntero
+
+    # return ("SUma   ", 10) BLOQUE DE CÓDIGO PARA PRUEBAS
+    return operacionArg, enteroArg
 
 def main():
     operacion, entero = obtener_datos()
