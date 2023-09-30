@@ -1,9 +1,14 @@
+#Pérez Servin Darshan Israel
+#PROYECTO 1
 import sys
 import unicodedata #Para evitar problemas en los strings de operaciónes
 
 from src.genera_archivos import enteros_aleatorios
 from src.borrador import borrar_archivos
 
+print("\n/////////////////////////////////////////////////////////")
+print("-= ¡BIENVENID@ AL PROGRAMA DE OPERACIONES MATEMÁTICAS! =-")
+print("/////////////////////////////////////////////////////////\n")
 
 def obtener_datos():
     return ("DiviSION   ", 10)
@@ -21,7 +26,7 @@ def main():
             # Convierte la línea a un número entero y agrega a la lista
             numero = int(linea.strip())  # strip() elimina los espacios en blanco y saltos de línea
             lista_numeros.append(numero)
-    print("Los números son:", lista_numeros)
+    print("\nLos números son:\n",lista_numeros,"\n")
 
     #=============================================================================
 
@@ -54,6 +59,7 @@ def main():
     #(Si y solo si se ingresó los valores correctos)
     if ((StarIf_Operación and StarIf_Entero) == True):
         resultado = []
+
         if operacion == "suma":
             print("El resultado de la ",operacion," con ",entero," es:")
             for i in lista_numeros:
@@ -61,11 +67,13 @@ def main():
             print(resultado)   
 
         elif operacion == "resta": 
+            print("El resultado de la ",operacion," con ",entero," es:")
             for j in lista_numeros:
                 resultado.append(j - entero)  
             print(resultado)   
 
         elif operacion == "multiplicacion": 
+            print("El resultado de la ",operacion," con ",entero," es:")
             for k in lista_numeros:
                 resultado.append(k * entero)  
             print(resultado) 
@@ -73,23 +81,34 @@ def main():
         elif operacion == "division":
             #Verificamos que el usuario no meta el valor 0
             if (entero != 0):
+                print("El resultado de la ",operacion," entre ",entero," es:")
                 for l in lista_numeros:
                     resultado.append(l / entero)  
                 print(resultado)
             else:
                 print("¡No se puede dividir entre cero!")
         else: 
-            print("Usted no ingresó un operador válido.")
-    
-    #Si no inició por variables incorrectas
+            print("Usted no ingresó un operador válido. Error inesperado")
+
+    #=============================================================================
+
+        #Empezamos a guardar los resultados de la cadena en resultados.txt
+        with open("resultados.txt", "w") as archivoDatosResultados:
+            # Lee cada línea
+            for lineaR in resultado:
+                archivoDatosResultados.write(str(lineaR) + "\n")
+
+        print("\nSe han guardado los números en 'resultados.txt'.")
+
+    #=============================================================================
+
+    #Si no inició el programa de operación por variables incorrectas
     else:
         print("No se pudo iniciar las operaciones debido a que se ingresaron valores incorrectos.")
         print("Por favor, inténtelo de nuevo.")
-
-        #En teoría no puede pasar esto, pero como dice la propaganda del IMSS: "Más vale prevenir"
-
-
-    # Operamos con los numeros y los guardamos en el archivoDatos resultados
+    
+    #=-=-=-=-=-
+    
 
 
 if __name__ == "__main__":
