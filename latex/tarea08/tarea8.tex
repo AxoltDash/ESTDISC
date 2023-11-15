@@ -1,0 +1,91 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+%Multicolumns
+\usepackage{multicol}
+\usepackage{fdsymbol}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{marginnote}
+\usepackage{lineno}
+
+\pagenumbering{gobble}
+
+\newcolumntype{A}{ >{$} r <{$} @{} >{${}} l <{$} } 
+
+
+\title{Estructuras Discretas\\Tarea 8\\ Fecha de entrega: lunes 13 de noviembre de 2023\\ \textbf{Por: P\'erez Servin Darshan Israel}}
+\author{Profesor: Nestaly Mar\'in Nev\'arez \\ Ayudantes de teor\'ia: Eduardo Pereyra Zamudio  \\ \phantom{Ayudantes de teor\'ia:} Ricardo L\'opez Villaf\'an \phantom{aa}\\ Ayudantes de laboratorio: Edgar Mendoza Le\'on \phantom{aaai}\\ \phantom{Ayudantes de laboratorio:} David Valencia Rodr\'iguez}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-15pt}
+Resuelva de manera limpia y ordenada los siguientes ejercicios. 
+Indique claramente el n\'umero de pregunta que se esta resolviendo.
+
+
+\begin{enumerate}
+
+	\item \marginnote{\em 5 puntos} Traduzca los siguientes enunciados a l\'ogica de predicados. 
+Indique de manera clara el universo de discurso, los predicados que utilizar\'a, y a qu\'e inciso corresponde cada f\'ormula.
+  \begin{enumerate}
+    \item Hay un mango que es m\'as dulce que todos los limones y que todas las peras.
+	  \item No es cierto que todo lim\'on sea m\'as dulce que alg\'un mango.
+    \item Todas las manzanas son frutas.
+    \item Algunas frutas son \'acidas.     
+    \item Hay alguna pera que no es m\'as dulce que alguna manzana.
+    \item Todas las fresas son \'acidas y son m\'as dulces que los limones.
+  \end{enumerate}
+    \textbf{UNIVERSO}: Frutas\\
+    \textbf{M(x)}: $x$ es mango\\
+    \textbf{P(x)}: $x$ es pera\\
+    \textbf{L(x)}: $x$ es lim\'on\\
+    \textbf{F(x)}: $x$ es fresa\\
+    \textbf{B(x)}: $x$ es manzana\\
+    
+    \textbf{A(x)}: $x$ es \'acida\\
+    \textbf{D(x,y)}: $x$ es m\'as dulce que $y$\\
+    \begin{enumerate}
+      \item $$\exists x (M(x) \land (\forall y (L(y) \to D(x,y))) \land (\forall z (P(z) \to D(x,y))))$$
+      \item $$\neg \forall x (L(x) \to \exists y (M(y) \land D(x,y)))$$
+      \item $$\forall x(B(x))$$
+      \item $$\exists x(A(x))$$
+      \item $$\exists x (P(x)  \land \neg \exists y (B(y) \land D(y,x)))$$
+      \item $$\forall x \forall y (F(x) \to (A(x) \land \forall y (L(y) \land D(x,y))))$$
+   \end{enumerate}
+   
+  \item \marginnote{\em 5 puntos} Sean $f^{(1)}$ y $g^{(2)}$ s\'imbolos de funci\'on, y sean $P^{(1)}$, $Q^{(2)}$ y $R^{(3)}$ s\'imbolos de predicado.
+	Para cada uno de los siguientes incisos, determine si se trata de un t\'ermino, una f\'ormula at\'omica, una f\'ormula no at\'omica (compleja), una f\'ormula cuantificada (f\'ormula con cuantificadores, pero con presencias de variables libres), o un enunciado (f\'ormula con cuantificadores, sin presencias de variable libres). 
+	En caso de ser de una f\'ormula cuantificada con variables libres, indique cu\'ales son las presencias de variables libres.
+
+  \begin{enumerate}
+  	\item $\neg\forall x\forall y(P(f(x)) \land Q(x,j))$\\
+    \textbf{Es una f\'ormula cuantificada. Siendo "j" una variable libre}
+  	\item $Q(g(x,f(y)), b)$\\
+    \textbf{Es una f\'ormula at\'omica}
+  	\item $P(a) \lor \neg R(x, y, z)$\\
+    \textbf{Es una f\'ormula no at\'omica}
+  	\item $\exists x \exists z(P(f(x)) \wedge Q(x,g(x, y)) \to \forall y R(x,y,z))$\\
+    \textbf{Es un enunciado}
+  	\item $\neg Q(a, f(b)) \to \neg P(g(a, b))$\\
+    \textbf{Es una f\'ormula no at\'omica}
+ 	  \item $\forall x \forall y \forall z(P(x,y) \wedge R(x,y,z)) \lor \exists z(Q(x,z))$\\
+    \textbf{Es un enunciado}
+    \item $\forall x (F(x) \to (A(x) \land \forall y (L(y) \to D(x, y))))$\\
+    \textbf{Es un enunciado}
+
+
+  \end{enumerate}
+		
+\end{enumerate}
+
+%\linenumbers
+
+\end{document}
