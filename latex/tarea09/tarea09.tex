@@ -1,0 +1,138 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{bookmark}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+%Multicolumns
+\usepackage{multicol}
+\usepackage{fdsymbol}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{marginnote}
+\usepackage{enumitem}
+\usepackage{lineno}
+\pagenumbering{gobble}
+
+
+\newcolumntype{A}{ >{$} r <{$} @{} >{${}} l <{$} } 
+
+
+\title{Estructuras Discretas\\Tarea 9 \textbf{Por: P\'erez Servin Darshan Israel}\\ Fecha de entrega: martes 21 de noviembre de 2023}
+\author{Profesor: Nestaly Mar\'in Nev\'arez \\ Ayudantes de teor\'ia: Eduardo Pereyra Zamudio  \\ \phantom{Ayudantes de teor\'ia:} Ricardo L\'opez Villaf\'an \phantom{aa}\\ Ayudantes de laboratorio: Edgar Mendoza Le\'on \phantom{aaai}\\ \phantom{Ayudantes de laboratorio:} David Valencia Rodr\'iguez}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-15pt}
+Resuelva de manera limpia y ordenada los siguientes ejercicios. 
+Indique claramente el n\'umero de pregunta que se esta resolviendo.
+
+
+\begin{enumerate}
+
+	\item \marginnote{\it2 puntos} Traduzca los siguientes enunciados a l\'ogica de predicados. 
+  Indique de manera clara el universo de discurso, los predicados que utilizar\'a, y a qu\'e inciso corresponde cada f\'ormula. Defina un \'unico universo de discurso para todos los predicados.\\
+    \\ \textbf{Universo:} Criaturas
+    \\ \textbf{D(x):} x es un drag\'on
+    \\ \textbf{G(x):} x es un grifo
+    \\ \textbf{M(x,y):} x es m\'as fuerte que y
+  \begin{enumerate}    
+    \item Existen a lo m\'as dos dragones.
+    $$\exists x \exists y (D(x) \wedge D(y) \wedge \neg \exists z (D(z) \wedge z \neq x \wedge z \neq y))$$
+    \item Existen exactamente dos dragones.
+    $$\exists x \exists y (D(x) \wedge D(y) \wedge z \neq y \wedge \neg \exists z (D(z) \wedge z \neq x \wedge z \neq y))$$
+    \item S\'olo existe un grifo que es m\'as fuerte que todos los dragones.
+    $$\exists x (G(x) \wedge \forall y(D(x) \to M(x,y)))$$
+    \item Para todo drag\'on hay un grifo que es m\'as fuerte que \'el.
+    $$\forall x(D(x) \to \exists y ( G(g) \wedge M(g, d)))$$
+  \end{enumerate}
+  
+ \item \marginnote{\it4 puntos} Considere los siguientes predicados:
+  \begin{itemize}
+    \item $P(x)$ $x$ es un n\'umero par.
+    \item $M(x,y)$ $x$ es menor que $y$.
+    \item $D(x,y)$ la divisi\'on de $x$ entre $y$ est\'a dentro del conjunto.
+  \end{itemize}
+
+  (Por ejemplo, la divisi\'on de los n\'umeros naturales $6$ entre $2$ es $3$, as\'i que $D(6,2)$ es verdadero en los n\'umeros naturales. La divisi\'on de los n\'umeros enteros $-5$ entre $2$ es $-5/2$, por lo que $D(-5,2)$ es falso en los n\'umeros enteros, mientras que en el dominio de los n\'umeros reales es verdadero.)
+  Y los siguientes enunciados:\\\\
+  \textbf{"Cabe aclarar que los contraejemplos no estan estrictamente relacionados con los enunciados, osea que no son directamente una negación de los enunciados y solo se usó lenguaje lógico para explicar los contraejemplos."}\\
+  \begin{enumerate}[label=\arabic*)]
+    \item $\forall x \forall y \left(M\left(x,y\right) \to \exists z\left(M\left(x,z\right) \wedge M\left(z,y\right)\right)\right)$
+    \begin{enumerate}[label=\alph*)]
+      \item \textbf{Es falso para los naturales.}\\
+      Entonces: $\exists x \exists y (((x = 2) \wedge (y = 3)) \to \neg \exists z (M(x,z) \wedge M (z,y)))$
+      \item \textbf{Es falso para los enteros.}\\
+      Entonces: $\exists x \exists y (((x = -5) \wedge (y = -4)) \to \neg \exists z (M(x,z) \wedge M (z,y)))$
+      \item \textbf{Es verdadero para los reales.}\\
+    \end{enumerate}
+
+    \item $\forall x \left(\left(P\left(x\right) \wedge x \neq 0\right) \to M\left(0,x\right)\right)$
+    \begin{enumerate}[label=\alph*)]
+      \item \textbf{Es verdadero para los naturales.}
+      \item \textbf{Es falso para los enteros.}\\
+      Entonces: $\exists x ((x = -2) \to \neg M(0,x))$
+      \item \textbf{Es falso para los reales.}\\
+      Entonces: $\exists x ((x = -4.6) \to \neg M(0,x))$\\
+    \end{enumerate}
+
+    \item $\forall x \forall y \left(x \neq 0 \wedge y\neq 0 \to \left(D\left(x,y\right) \wedge D\left(y,x\right)\right)\right)$
+    \begin{enumerate}[label=\alph*)]
+      \item \textbf{Es falso para los naturales.}\\
+      Entonces: $\exists x \exists y (x = 2 \wedge y = 3 \to (\neg D(x,y) \wedge \neg D(y,x)))$
+      \item \textbf{Es falso para los enteros.}\\
+      Entonces: $\exists x \exists y (x = -4 \wedge y = -7 \to (\neg D(x,y) \wedge \neg D(y,x)))$
+      \item \textbf{Es verdadero para los reales.}\\
+      
+    \end{enumerate}
+
+    \item La negaci\'on del inciso 3)\\
+    $\equiv \neg (\forall x \forall y (x\neq 0 \wedge y \neq 0 \to (D(x,y) \wedge D(y,x))))$\\
+    $\equiv (\exists x \exists y ((x\neq 0 \wedge y \neq 0) \lor \neg (D(x,y) \wedge D(y,x))))$\\
+    
+    \begin{enumerate}[label=\alph*)]
+      \item \textbf{Es verdadero para los naturales.}
+      \item \textbf{Es verdadero para los enteros.}
+      \item \textbf{Es falso para los reales.}\\
+      Entonces:\\
+      $(\exists x \exists y ((x = 1 \wedge y = 3) \to ((x\neq 0 \wedge y \neq 0) \lor \neg (D(x,y) \wedge D(y,x)))))$\\
+      $(\exists x \exists y ((x = 1 \wedge y = 3) \to ((false) \lor \neg (true))))$\\
+      $(\exists x \exists y ((x = 1 \wedge y = 3) \to ((false) \lor (false))))$\\
+      $(\exists x \exists y ((x = 1 \wedge y = 3) \to (false)))$\\
+
+    \end{enumerate}
+
+  \end{enumerate}
+
+  Eval\'ue el valor de verdad de cada enunciado con respecto a cada uno de los siguientes universos de discurso. Para aquellos enunciados que sean falsos, exhiba un contraejemplo (una asignaci\'on de individuos del universo en cuesti\'on a las variables tales que el enunciado sea falso).
+  \begin{enumerate}
+    \item Los n\'umeros naturales (incluyendo el 0).
+    \item Los n\'umeros enteros.
+    \item Los n\'umeros reales.
+  \end{enumerate}
+    
+    \item \marginnote{\it4 puntos} Demuestre utilizando inducci\'on que las siguientes f\'ormulas se cumplen.			
+	    \begin{enumerate}
+			  \item $\sum\limits_{k=1}^n k\,(k!) = (n+1)!-1$\\
+        Definición de inducción sobre $n$:
+        \begin{itemize}
+          \item Caso $n = 0$
+          \item P.D $\sum\limits_{k=1}^0 k\,(k!) = (0+1)!-1$
+          \item Demostramos lado derecho de la fórmula primero:
+			    $\sum\limits_{k=1}^0 k\,(k!) = 0$ \hfill Por (LO SABESMOS GRACIAS A LA CLASE PERO NO ME ACUERDO DEL NAME)
+          \item Ahora demostramos lado derecho de la fórmula:
+			    $(0+1)!-1 = (1)!-1$ \hfill Por inducción matemática
+			    $(0+1)!-1 = (1)!-1$ \hfill Por inducción matemática
+      \end{itemize}
+				\item $\sum\limits_{k=1}^n (2k - 1)^3 = n^2(2n^2 - 1)$				
+			\end{enumerate}	
+
+	\end{enumerate}	
+%\linenumbers
+
+\end{document}
