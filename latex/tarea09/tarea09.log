@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.15)  16 NOV 2023 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.15)  16 NOV 2023 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,11 +641,9 @@ LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 30.
-Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 38
-.
 Package marginnote Info: right page because not two side mode on input line 38.
 
-Package marginnote Info: xpos seems to be 150.27002pt on input line 38.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 38.
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--45
 
@@ -687,11 +685,9 @@ LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 46.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
 (Font)              scaled to size 5.0pt on input line 46.
-Package marginnote Info: Margin note 1.2 is on absolute page 1 on input line 55
-.
 Package marginnote Info: right page because not two side mode on input line 55.
 
-Package marginnote Info: xpos seems to be 150.27002pt on input line 55.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 55.
 
 Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
@@ -735,44 +731,85 @@ een already used, duplicate ignored
                    \relax 
 l.108     \end{enumerate}
                           [2]
-Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 11
-9.
-Package marginnote Info: right page because not two side mode on input line 119
+Package marginnote Info: right page because not two side mode on input line 118
 .
-Package marginnote Info: xpos seems to be 150.27002pt on input line 119.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 118.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
+
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \end{document}
-                     [3] (./tarea09.aux) ) 
+l.143             $$= (n+2)! -1$$
+                                  [3]
+Overfull \hbox (12.8754pt too wide) in paragraph at lines 155--157
+[]\OT1/cmr/m/n/10 Hip^^Sotesis inductiva suponesmos P(n) Suponemos $[]\U/FdSymb
+olF/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 k \U/FdSymbolA/m/n/10 ^^N \OT1/
+cmr/m/n/10 1\U/FdSymbolF/m/n/10 ^^F[] \U/FdSymbolB/m/n/10 ^^@ \OML/cmm/m/it/10 
+n[]\U/FdSymbolF/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 n[] \U/FdSymbolA/m/
+n/10 ^^N
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--167
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.176 \end{document}
+                     [4] (./tarea09.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 14319 strings out of 480247
- 216736 string characters out of 5896150
- 493573 words of memory out of 5000000
- 32058 multiletter control sequences out of 15000+600000
+ 14317 strings out of 480247
+ 216715 string characters out of 5896150
+ 493461 words of memory out of 5000000
+ 32056 multiletter control sequences out of 15000+600000
  485970 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  74i,8n,77p,358b,750s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/darshan/.texlive2021/texmf-va
-r/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fon
-ts/type1/public/fdsymbol/FdSymbolA-Book.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/fdsymbol/FdSymbolB-Book.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/fdsymbol/FdSymbolC-Book.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/fdsymbol/FdSymbolE-Book.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/fdsymbol/FdSymbolF-Book.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tarea09.pdf (3 pages, 149296 bytes).
+ </home/darshan/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.6
+00pk></usr/share/texlive/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolA-Book.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolB-Book.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolC-Book.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolE-Book.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolF-Book.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on tarea09.pdf (4 pages, 152147 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  30 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

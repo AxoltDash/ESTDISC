@@ -45,11 +45,11 @@ Indique claramente el n\'umero de pregunta que se esta resolviendo.
     \item Existen a lo m\'as dos dragones.
     $$\exists x \exists y (D(x) \wedge D(y) \wedge \neg \exists z (D(z) \wedge z \neq x \wedge z \neq y))$$
     \item Existen exactamente dos dragones.
-    $$\exists x \exists y (D(x) \wedge D(y) \wedge z \neq y \wedge \neg \exists z (D(z) \wedge z \neq x \wedge z \neq y))$$
+    $$\exists ! x \exists ! y (D(x) \wedge D(y))$$
     \item S\'olo existe un grifo que es m\'as fuerte que todos los dragones.
-    $$\exists x (G(x) \wedge \forall y(D(x) \to M(x,y)))$$
+    $$\exists ! x (G(x) \wedge \forall y(D(y) \to M(x,y)))$$
     \item Para todo drag\'on hay un grifo que es m\'as fuerte que \'el.
-    $$\forall x(D(x) \to \exists y ( G(g) \wedge M(g, d)))$$
+    $$\forall x(D(x) \to \exists y ( G(y) \wedge M(y, d)))$$
   \end{enumerate}
   
  \item \marginnote{\it4 puntos} Considere los siguientes predicados:
@@ -106,7 +106,6 @@ Indique claramente el n\'umero de pregunta que se esta resolviendo.
       $(\exists x \exists y ((x = 1 \wedge y = 3) \to (false)))$\\
 
     \end{enumerate}
-
   \end{enumerate}
 
   Eval\'ue el valor de verdad de cada enunciado con respecto a cada uno de los siguientes universos de discurso. Para aquellos enunciados que sean falsos, exhiba un contraejemplo (una asignaci\'on de individuos del universo en cuesti\'on a las variables tales que el enunciado sea falso).
@@ -118,18 +117,57 @@ Indique claramente el n\'umero de pregunta que se esta resolviendo.
     
     \item \marginnote{\it4 puntos} Demuestre utilizando inducci\'on que las siguientes f\'ormulas se cumplen.			
 	    \begin{enumerate}
-			  \item $\sum\limits_{k=1}^n k\,(k!) = (n+1)!-1$\\
-        Definición de inducción sobre $n$:
+			  \item $\sum\limits_{k=1}^n k\,(k!) = (n+1)!-1$\\\\
+        Inducción sobre $n$:
         \begin{itemize}
-          \item Caso $n = 0$
-          \item P.D $\sum\limits_{k=1}^0 k\,(k!) = (0+1)!-1$
-          \item Demostramos lado derecho de la fórmula primero:
-			    $\sum\limits_{k=1}^0 k\,(k!) = 0$ \hfill Por (LO SABESMOS GRACIAS A LA CLASE PERO NO ME ACUERDO DEL NAME)
-          \item Ahora demostramos lado derecho de la fórmula:
-			    $(0+1)!-1 = (1)!-1$ \hfill Por inducción matemática
-			    $(0+1)!-1 = (1)!-1$ \hfill Por inducción matemática
+          \item Caso base: $n = 1$\\\\
+            P.D $\sum\limits_{k=1}^1 k\,(k!) = (1+1)!-1$
+          \item Demostramos lado izquierdo de la fórmula primero:\\
+			      $\sum\limits_{k=1}^1 k\,(k!) = 1\,(1!)$ \hfill Por que la sumatoria solo se repite una vez\\
+			      $1\,(1!) = 1,/(1)$ \hfill Por matemática\\
+			      $1\,(1) = 1$ \hfill Por matemática\\
+          \item Ahora demostramos lado derecho de la fórmula:\\
+			      $(0+1)!-1 = (1)!-1$ \hfill Por inducción matemática\\
+			      $(1)!-1 = 1-1$ \hfill Por inducción matemática\\
+			      $1-1 = 0$ \hfill Por inducción matemática\\
+            Como en abmbos dan $=0$, entonces ya demostramos el caso \textbf{base}\\
+
+          \item Hip\'otesis inductiva\\ (Suponer que la propiedad se cumple para "n")
+            $$\sum\limits_{k=1}^n k\,(k!) = (n+2)!-1$$
+            Probar P(n+1) siendo n+1 = m
+            $$\sum\limits_{k=1}^m k\,(k!) = (n+2)!-1$$
+            $$\sum\limits_{k=1}^n k\,(k!) + (n+1)\,((n+1)!) = $$
+            $$= [(n+1)! - 1] + (n+1)(n+1)!$$
+            $$= (n+1)! (1 + (n+1)) -1!$$
+            $$= (n+1)! (n + 2) -1$$
+            $$= (n+2)! -1$$
+
+            % \item Supongamos que m = n-1 y que: $\sum\limits_{k=1}^m k\,(k!) = (n)!-1$
+            % Por paso inductivo es demostrar ($m = n-1$) y que: $\sum\limits_{k=1}^m k\,(k!) = (n)!-1$\\\\
+            % Supongamos que ($m = n-1$) y que: $\sum\limits_{k=1}^m k\,(k!) = (n)!-1$\\\\
+            % Paso inductivo: Por demostrar: $\sum\limits_{k=1}^n k\,(k!) = (n+1)!-1$\\\\
+            % PIPIPIIPIPIPI
+
       \end{itemize}
-				\item $\sum\limits_{k=1}^n (2k - 1)^3 = n^2(2n^2 - 1)$				
+				\item $\sum\limits_{k=1}^n (2k - 1)^3 = n^2(2n^2 - 1)$	
+          Caso base n=1
+
+          Hipótesis inductiva suponesmos P(n)
+          Suponemos $\sum\limits_{k=1}^n (2k-1)^3 = n^2 (2n^2 -1)$
+          
+          Probamos para P(n+1) y que $m = n +1$\\
+          Suponemos $\sum\limits_{k=1}^m (2k-1)^3$\\
+          P.D $ = (n+1)^2 (2(n+1)^2 -1)$\\
+          $\sum\limits_{k=1}^m (2k-1)^3 = \sum\limits_{k=1}^n (2k-1)^3 + (2(n+1)-1)^3$\\
+          $n^2 (2n^2 -1) + (2(n+1)-1)^3$ \hfill Por hi\'otesis inductiva\\
+          $n^2 (2n^2 -1) + (2n+1)^3$\\
+          $n^2 (2n^2 -1) + 8n^3 + 12n^2 + 6n + 1$\\
+          $2n^4 + 8n^3 + 11n^2 + 6n + 1$\\
+          $n^2 (2n^2 + 8n + 11n^2 + 6n + 1$\\
+
+
+          % Fotoooooos
+
 			\end{enumerate}	
 
 	\end{enumerate}	
